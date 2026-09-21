@@ -61,6 +61,7 @@ The system focuses on:
 - Automatically extracts spatial features  
 - Detects gesture patterns with high accuracy  
 
+
 ### Optimization  
 - Optimizer: Adam  
 - Loss Function: Categorical Cross-Entropy  

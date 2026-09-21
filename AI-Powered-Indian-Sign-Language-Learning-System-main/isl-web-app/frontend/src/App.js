@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import SignSearch from './components/SignSearch';
 
 // --- Layout Components ---
 import Navbar from './components/Navbar';
@@ -40,6 +41,7 @@ function App() {
             <Route path="/" element={<LandingPage />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/about" element={<About />} />
+            <Route path="/sign-search" element={<SignSearch />} />
 
             {/* AI Learning Modules (Protected) */}
             <Route path="/image-mode" element={
