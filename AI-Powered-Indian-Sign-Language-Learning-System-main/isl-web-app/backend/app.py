@@ -71,6 +71,8 @@ except Exception as e:
 
 try:
     from routes.video_mode import video_bp
+    from routes.sign_search import sign_search_bp
+    app.register_blueprint(sign_search_bp,url_prefix='/api')
     app.register_blueprint(video_bp, url_prefix='/api')
 except Exception as e:
     print(f"Warning video_bp: {e}")
@@ -224,3 +226,9 @@ def login():
 if __name__ == '__main__':
     # Local Server Link
     socketio.run(app, debug=True, port=5000, host='127.0.0.1', allow_unsafe_werkzeug=True)
+
+try:
+    from routes.sign_search import sign_search_bp
+    app.register_blueprint(sign_search_bp, url_prefix='/api')
+except Exception as e:
+    print(f"Warning sign_search_bp:{e}")
